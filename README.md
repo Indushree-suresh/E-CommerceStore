@@ -1,32 +1,12 @@
-# Multi-Service Node.js E-Commerce Application Deployment Using Terraform and Docker
+**Multi-Service Node.js E-Commerce Application Deployment Using Terraform and Docker**
 
-## 1. Project Overview
-
-### Objective
+**Objective**
 
 Deploy a multi-service Node.js E-Commerce application using Docker and Terraform on AWS.
 
-### Architecture Diagram
+**Docker Image Creation**
 
-**Screenshot 1: Architecture Diagram**
-
-Insert:
-
-* VPC
-* Public Subnet
-* Security Group
-* EC2 Instance
-* Docker Containers
-* MongoDB
-* Frontend
-
-[INSERT SCREENSHOT 1 HERE]
-
----
-
-# 2. Docker Image Creation
-
-## Dockerfiles Created
+**Dockerfiles Created**
 
 The following Docker images were created:
 
@@ -38,229 +18,60 @@ The following Docker images were created:
 | Order    | indusonushivu/orders-service   |
 | Cart     | indusonushivu/cart-service     |
 
-### Docker Build Process
+<img width="1018" height="241" alt="image" src="https://github.com/user-attachments/assets/41225e4d-5b32-45b1-81b8-b775facf9cd3" />
 
-**Screenshot 2: Docker Build Commands Successfully Executed**
+**Docker images push to Docker Hub**
+<img width="1647" height="699" alt="image" src="https://github.com/user-attachments/assets/aed672a4-0472-464d-bb8c-bb37d686ccd4" />
 
-Show:
-docker build commands
+**Docker backend container and Miongodb up and running**
+<img width="1853" height="288" alt="image" src="https://github.com/user-attachments/assets/6131b88e-fcc4-4d16-a555-a2739206a517" />
 
-[INSERT SCREENSHOT 2 HERE]
 
-### Docker Images Verification
+**Docker frontend container up and running**
+<img width="1835" height="76" alt="image" src="https://github.com/user-attachments/assets/6849df71-cde3-4b3d-8026-95a4b84f7d20" />
 
-**Screenshot 3: Docker Images Available Locally**
+**Terraform Infrastructure Provisioning**
 
-Command:
-
-docker images
-
-[INSERT SCREENSHOT 3 HERE]
-
-### DockerHub Repositories
-
-**Screenshot 4: DockerHub Repository Showing All Images**
-
-Show:
-
-* frontend-service
-* user-service
-* products-service
-* orders-service
-* cart-service
-
-[INSERT SCREENSHOT 4 HERE]
-
----
-
-# 3. Terraform Infrastructure Provisioning
-
-## Terraform Configuration
+**Terraform Configuration**
 
 Resources Created:
 
 * VPC
-* Public Subnet
 * Security Group
 * EC2 Instance
 
-### Terraform Files
+**Running Instance creates through terraform**
+<img width="1816" height="429" alt="image" src="https://github.com/user-attachments/assets/8c47e0b6-c2e4-4b42-a371-bc5f176de515" />
 
-**Screenshot 5: Terraform main.tf File**
+**Security group created**
+<img width="1835" height="884" alt="image" src="https://github.com/user-attachments/assets/34a6834a-d9fd-4bb4-aa8e-ad86b5bd160c" />
 
-Show:
+**VPC Created**
+<img width="1818" height="530" alt="image" src="https://github.com/user-attachments/assets/53b5b2c7-8ba5-4a27-b606-610bfca06e7c" />
 
-* VPC
-* Subnet
-* Security Group
-* EC2
+**Terraform Files crearted in terminal**
+**Terraform main.tf File**
+<img width="1624" height="767" alt="image" src="https://github.com/user-attachments/assets/162e6346-6120-4e3e-812e-dce6b9e231f7" />
+<img width="1233" height="607" alt="image" src="https://github.com/user-attachments/assets/660a63ed-e75d-4398-a228-cbd2dfc42052" />
+<img width="1312" height="584" alt="image" src="https://github.com/user-attachments/assets/287aff54-140a-403d-bd84-79a7b3b08df6" />
 
-[INSERT SCREENSHOT 5 HERE]
+**Terraform Initialization**
+<img width="1175" height="372" alt="image" src="https://github.com/user-attachments/assets/13e63cb1-bb07-4e31-b0f5-4d429e44eba1" />
 
-### Terraform Initialization
+**Terraform Apply and outputs**
+<img width="1291" height="768" alt="image" src="https://github.com/user-attachments/assets/3591fe5a-31dd-4edc-aa35-5bf1bb0a8e86" />
+<img width="1148" height="559" alt="image" src="https://github.com/user-attachments/assets/572a8096-6bb6-4b30-ad14-ae475c379d8a" />
 
-**Screenshot 6: Terraform Init Success**
+**Frontend UI Access**
+<img width="1366" height="423" alt="image" src="https://github.com/user-attachments/assets/a20362bf-fd18-4ed4-b5b7-d945eec066ff" />
 
-Command:
+**Backend Service Running via localhost**
+<img width="1025" height="535" alt="image" src="https://github.com/user-attachments/assets/f075c836-2cd7-4b90-a9c2-62303e1caeaf" />
 
-terraform init
 
-[INSERT SCREENSHOT 6 HERE]
+**Challenges and Troubleshooting**
 
-### Terraform Apply
-
-**Screenshot 7: Terraform Apply Success**
-
-Command:
-
-terraform apply
-
-Show:
-Apply complete!
-
-[INSERT SCREENSHOT 7 HERE]
-
----
-
-# 4. AWS Infrastructure Verification
-
-## VPC
-
-**Screenshot 8: AWS VPC Dashboard**
-
-Show created VPC
-
-[INSERT SCREENSHOT 8 HERE]
-
-## Subnet
-
-**Screenshot 9: AWS Subnet Dashboard**
-
-Show public subnet
-
-[INSERT SCREENSHOT 9 HERE]
-
-## Security Group
-
-**Screenshot 10: Security Group Inbound Rules**
-
-Show:
-
-* 22
-* 80
-* 3001
-* 3002
-* 3003
-* 3004
-
-[INSERT SCREENSHOT 10 HERE]
-
-## EC2 Instance
-
-**Screenshot 11: EC2 Instance Running**
-
-Show:
-
-* Instance State = Running
-* Public IP
-
-[INSERT SCREENSHOT 11 HERE]
-
----
-
-# 5. Docker Deployment on EC2
-
-## MongoDB Deployment
-
-**Screenshot 12: MongoDB Container Running**
-
-Command:
-
-docker ps
-
-Show mongodb container
-
-[INSERT SCREENSHOT 12 HERE]
-
-## Backend Services Deployment
-
-**Screenshot 13: Backend Containers Running**
-
-Command:
-
-docker ps
-
-Show:
-
-* user-service
-* products-service
-* orders-service
-* cart-service
-
-[INSERT SCREENSHOT 13 HERE]
-
-## Frontend Deployment
-
-**Screenshot 14: Frontend Container Running**
-
-Command:
-
-docker ps
-
-Show frontend-service
-
-[INSERT SCREENSHOT 14 HERE]
-
----
-
-# 6. Terraform Outputs
-
-### Public IP Output
-
-Command:
-
-terraform output
-
-**Screenshot 15: Terraform Output**
-
-Show:
-
-frontend_public_ip = "100.28.227.81"
-
-[INSERT SCREENSHOT 15 HERE]
-
----
-
-# 7. Application Verification
-
-## Frontend Access
-
-URL:
-
-http://100.28.227.81
-
-**Screenshot 16: Frontend Application Running in Browser**
-
-Show webpage loaded successfully.
-
-[INSERT SCREENSHOT 16 HERE]
-
-## Service Verification
-
-### Backend Logs
-
-**Screenshot 17: Service Logs**
-
-Show:
-docker logs user-service
-
-[INSERT SCREENSHOT 17 HERE]
-
----
-
-# 8. Challenges and Troubleshooting
-
-## MongoDB Connectivity Issue
+**MongoDB Connectivity Issue**
 
 Problem:
 Backend services attempted to connect to localhost:27017 instead of MongoDB container.
@@ -268,15 +79,8 @@ Backend services attempted to connect to localhost:27017 instead of MongoDB cont
 Solution:
 Configured Docker networking and MongoDB container communication.
 
-**Screenshot 18: Troubleshooting Logs**
 
-Show actual MongoDB connection error.
-
-[INSERT SCREENSHOT 18 HERE]
-
----
-
-# 9. Conclusion
+**Conclusion**
 
 Successfully:
 
