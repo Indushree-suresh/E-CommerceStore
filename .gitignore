@@ -214,3 +214,5 @@ __marimo__/
 crash.log
 .terraform/
 **/.terraform/
+.terraform/
+**/.terraform/
