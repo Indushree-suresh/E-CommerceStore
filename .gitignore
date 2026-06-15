@@ -212,3 +212,5 @@ __marimo__/
 *.tfstate
 *.tfstate.backup
 crash.log
+.terraform/
+**/.terraform/
